@@ -56,14 +56,16 @@ function App() {
           <h1>Temp check: How are you doing today?</h1>
           <Thumb temp={temp}/>
           <form onSubmit={(e) => handleSubmit(e)}>
-              <input type="range" min="-100" max="100" defaultValue={100} step="1" onChange={(e) => setTemp(e.target.value)}/>
+              <label>Drag this sliderrr</label>
+              <input type="range" min="-100" max="100" defaultValue={80} step="1" onChange={(e) => setTemp(e.target.value)}/>
               <button type="submit" disabled={isDisabled}>Submit</button>
           </form>
       </div>
   ) : (
       <div className="app">
-          <h1>Global average temp: How are you doing today?</h1>
+          <h1>Avg temp: How are you doing today?</h1>
           <Thumb temp={avgTemp}/>
+          <label>Global average temp:</label>
           <input type="range" min="-100" max="100" value={avgTemp} step="1" style={{pointerEvents: 'none'}}/>
           <p>Thx! Come back tmrw to submit again :)</p>
       </div>

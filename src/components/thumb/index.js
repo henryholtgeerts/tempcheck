@@ -9,9 +9,7 @@ import './style.css'
 const Model = ({temp}) => {
     const obj = useLoader(OBJLoader, '/thumb_centered.obj')
     const rot = ( -0.015 * temp ) + 4.5;
-    return <primitive object={obj} position={[-0.3, 0, 2]} rotation={[rot, 0, 0]}>
-        <meshToonMaterial/>
-    </primitive>
+    return <primitive object={obj} position={[-0.3, 0, 2]} rotation={[rot, 0, 0]}/>
 }
 
 const interpolateColor = (c0, c1, f) => {
